@@ -3,6 +3,7 @@ import requests
 
 BASE_URL = "https://api-colombia.com/api/v1"
 
+#Información general de Colombia
 def info_pais():
     url = f"{BASE_URL}/Country/Colombia"
     response = requests.get(url)
@@ -17,6 +18,7 @@ def info_pais():
     else:
         print("Error al consultar la API")
 
+#Departamentos y capitales
 def departamentos():
     url = f"{BASE_URL}/Department"
     response = requests.get(url)
@@ -30,6 +32,7 @@ def departamentos():
     else:
         print("Error al consultar la API")
 
+#Regiones y su descripción
 def regiones():
     url = f"{BASE_URL}/Region"
     response = requests.get(url)
@@ -43,6 +46,7 @@ def regiones():
     else:
         print("Error al consultar la API")
 
+#Atracciones turísticas
 def atracciones():
     url = f"{BASE_URL}/TouristicAttraction"
     response = requests.get(url)
@@ -56,6 +60,7 @@ def atracciones():
     else:
         print("Error al consultar la API")
 
+#Menú interactivo
 def menu():
     while True:
         print("\n===== MENÚ =====")
